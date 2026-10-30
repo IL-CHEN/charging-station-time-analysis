@@ -19,7 +19,7 @@ def test_imports() -> None:
     assert config.PROJECT_ROOT.exists()
     assert config.RAW_DATA_DIR.exists()
     assert config.FIGURES_DIR.exists()
-    print("✅ 包导入与路径配置正常")
+    print("包导入与路径配置正常")
 
 
 def test_pipeline() -> None:
@@ -28,14 +28,14 @@ def test_pipeline() -> None:
     loader = DataLoader()
     df_raw = loader.load_all()
     assert len(df_raw) > 0, "原始数据为空"
-    print(f"✅ 数据加载成功：{len(df_raw)} 条")
+    print(f"数据加载成功：{len(df_raw)} 条")
 
     df_clean = DataProcessor().process(df_raw)
     assert len(df_clean) > 0, "清洗后数据为空"
-    print(f"✅ 数据清洗成功：{len(df_clean)} 条")
+    print(f"数据清洗成功：{len(df_clean)} 条")
 
 
 if __name__ == "__main__":
     test_imports()
     test_pipeline()
-    print("\n🎉 全部冒烟测试通过")
+    print("\n全部冒烟测试通过")
