@@ -1,0 +1,48 @@
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# ----------------------------
+# IDE / 编辑器
+# ----------------------------
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# ----------------------------
+# 密钥与本地配置（绝不提交）
+# ----------------------------
+.env
+
+# ----------------------------
+# 大型数据、模型与输出（本地运行时生成，不纳入 GitHub）
+# ----------------------------
+data/raw/*
+data/processed/*
+data/outputs/*
+data/fonts/*.ttf
+*.pkl
+
+# 但保留目录占位文件，使结构在 GitHub 上可见
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/outputs/.gitkeep
+!data/outputs/**/.gitkeep
+!data/fonts/.gitkeep
+
+# ----------------------------
+# 操作系统
+# ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
